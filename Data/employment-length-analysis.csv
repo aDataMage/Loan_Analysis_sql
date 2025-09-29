@@ -1,0 +1,17 @@
+﻿employment_length,employment_type,count,default_rate
+Long,Full-time,1246,0.14
+Long,Self-employed,302,0.146
+Very Long,Unemployed,6,0.167
+Long,Part-time,401,0.17
+Long,Unemployed,87,0.172
+Medium,Part-time,2438,0.173
+Medium,Full-time,7356,0.182
+Medium,Self-employed,1857,0.183
+Medium,Unemployed,647,0.215
+Very Long,Full-time,83,0.217
+Short,Unemployed,895,0.24
+Very Long,Part-time,29,0.241
+Short,Full-time,10248,0.243
+Short,Part-time,3460,0.252
+Short,Self-employed,2596,0.256
+Very Long,Self-employed,33,0.333
