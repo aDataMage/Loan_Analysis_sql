@@ -85,9 +85,9 @@ ORDER BY default_rate ASC, loan_amount DESC;
 | **Quadrant**                   | **Characteristics**                     | **Example States**  | **Business Action**                   |
 | ------------------------------ | --------------------------------------- | ------------------- | ------------------------------------- |
 | 🟢 **Low Risk / High Volume**  | Ideal — efficient growth                | *None yet*          | Target state — invest and expand      |
-| 🟡 **Low Risk / Low Volume**   | Underexploited opportunity              | Wales, New York     | Increase marketing / lending capacity |
+| 🟡 **Low Risk / Low Volume**   | Underexploited opportunity              | Wales, New York, Quebec     | Increase marketing / lending capacity |
 | 🟠 **High Risk / High Volume** | Profit potential but concentrated risk  | BC, Scotland, Texas | Tighten underwriting, raise pricing   |
-| 🔴 **High Risk / Low Volume**  | Poor performance — unattractive profile | —                   | Exit or redesign product strategy     |
+| 🔴 **High Risk / Low Volume**  | Poor performance — unattractive profile | California, Ontario               | Exit or redesign product strategy     |
 
 ---
 
