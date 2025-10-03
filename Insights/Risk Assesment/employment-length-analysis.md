@@ -68,7 +68,7 @@ ORDER BY default_rate ASC;
 
 </br>
 
-![alt text](/Visualizations/employment-length-analysis.png)
+![alt text](/Visualizations/Risk%20Assesment/employment-length-analysis.png)
 
 ---
 

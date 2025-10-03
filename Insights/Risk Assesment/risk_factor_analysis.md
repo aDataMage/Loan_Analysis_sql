@@ -108,7 +108,7 @@ ORDER  BY avg_risk_score DESC;
 
 </br>
 
-![alt text](/Visualizations/risk_factor_analysis.png)
+![alt text](/Visualizations/Risk%20Assesment/risk_factor_analysis.png)
 
 ## **Statistical Analysis**
 

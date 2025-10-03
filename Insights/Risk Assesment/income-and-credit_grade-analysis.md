@@ -113,7 +113,7 @@ ORDER BY default_rate DESC;
 
 </br>
 
-![alt text](/Visualizations/income-and-credit_grade-analysis.png)
+![alt text](/Visualizations/Risk%20Assesment/income-and-credit_grade-analysis.png)
 
 ---
 
