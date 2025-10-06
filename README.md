@@ -1,7 +1,3 @@
-Of course. I have restructured your project description into a more formal report layout and generated a concise executive summary. The adjustments aim to enhance clarity and impact for a business audience.
-
------
-
 # Loan Default Analysis: A Data-Driven Approach to Risk Management and Market Strategy
 
 ## Executive Summary
