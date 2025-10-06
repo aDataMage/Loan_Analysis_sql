@@ -91,20 +91,20 @@ ORDER  BY avg_risk_score DESC;
 
 ## **Results**
 
-| DTI Level | Previous Default | Credit History Level | Segment Size | Default Rate | Avg DTI | Avg Credit Years | Avg Risk Score |
-|-----------|------------------|-----------------------|---------------|---------------|----------|------------------|-----------------|
-| High DTI  | 1                | Short History        | 1066          | 0.551         | 0.502    | 3                | 0.53            |
-| High DTI  | 1                | Medium History       | 733           | 0.514         | 0.502    | 8.1              | 0.50            |
-| Low DTI   | 1                | Short History        | 2029          | 0.303         | 0.282    | 3                | 0.47            |
-| High DTI  | 1                | Long History         | 95            | 0.611         | 0.521    | 17.5             | 0.46            |
-| High DTI  | 0                | Short History        | 4596          | 0.365         | 0.499    | 3                | 0.44            |
-| Low DTI   | 1                | Medium History       | 1639          | 0.297         | 0.279    | 8.3              | 0.44            |
-| High DTI  | 0                | Medium History       | 3136          | 0.335         | 0.497    | 8.2              | 0.40            |
-| Low DTI   | 1                | Long History         | 183           | 0.273         | 0.272    | 17.3             | 0.37            |
-| Low DTI   | 0                | Short History        | 10142         | 0.116         | 0.278    | 3                | 0.37            |
-| High DTI  | 0                | Long History         | 359           | 0.362         | 0.499    | 17.2             | 0.35            |
-| Low DTI   | 0                | Medium History       | 7661          | 0.104         | 0.275    | 8.2              | 0.34            |
-| Low DTI   | 0                | Long History         | 942           | 0.111         | 0.275    | 17.5             | 0.28            |
+| DTI Level | Previous Default | Credit History Level | Segment Size | Default Rate | Avg DTI | Avg Credit Years | Avg Risk Score 
+|-----------|------------------|-----------------------|---------------|---------------|----------|------------------|-----------------
+| High DTI  | 1                | Short History        | 1066          | 0.551         | 0.502    | 3                | 0.53            
+| High DTI  | 1                | Medium History       | 733           | 0.514         | 0.502    | 8.1              | 0.50            
+| Low DTI   | 1                | Short History        | 2029          | 0.303         | 0.282    | 3                | 0.47            
+| High DTI  | 1                | Long History         | 95            | 0.611         | 0.521    | 17.5             | 0.46            
+| High DTI  | 0                | Short History        | 4596          | 0.365         | 0.499    | 3                | 0.44            
+| Low DTI   | 1                | Medium History       | 1639          | 0.297         | 0.279    | 8.3              | 0.44            
+| High DTI  | 0                | Medium History       | 3136          | 0.335         | 0.497    | 8.2              | 0.40            
+| Low DTI   | 1                | Long History         | 183           | 0.273         | 0.272    | 17.3             | 0.37            
+| Low DTI   | 0                | Short History        | 10142         | 0.116         | 0.278    | 3                | 0.37            
+| High DTI  | 0                | Long History         | 359           | 0.362         | 0.499    | 17.2             | 0.35            
+| Low DTI   | 0                | Medium History       | 7661          | 0.104         | 0.275    | 8.2              | 0.34            
+| Low DTI   | 0                | Long History         | 942           | 0.111         | 0.275    | 17.5             | 0.28            
 
 </br>
 
@@ -131,6 +131,7 @@ ORDER  BY avg_risk_score DESC;
 ## **Business Recommendations**
 
 - Place more emphasis on Debt to Income Ratio and less on a person Credit History
+- Lower entry for people with no previous default and Low DTI
 
 ## **Next Steps**
 

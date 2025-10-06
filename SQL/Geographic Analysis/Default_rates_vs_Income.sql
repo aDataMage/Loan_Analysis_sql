@@ -47,7 +47,7 @@ SELECT
     Format(ROUND(AVG(c.person_income), 0), 'C') AS avg_income,
     ROUND(AVG(CAST(c.loan_status AS FLOAT)), 3) AS default_rate,
     ROUND(AVG(r.risk_score), 3) AS avg_risk_score,
-    SUM(c.loan_amnt) AS total_loan_volume
+    Format(SUM(c.loan_amnt), 'C') AS loan_amount
 FROM Credit_Risk AS c
 INNER JOIN risk_score AS r ON r.client_ID = c.client_ID
 WHERE c.city IS NOT NULL

@@ -1,9 +1,8 @@
-# Income and Credit Grade vs Default Rate Analysis
+# Credit Grade vs Income Bracket Analysis
 
 ## **Business Context**
 
 Credit grade has historically been one of the strongest predictors of default risk, reflecting a borrower’s creditworthiness, repayment history, and financial reliability. Income level, on the other hand, is often assumed to influence repayment capacity — but its predictive strength relative to credit grade is less clear.
-
 This analysis explores how **default probability varies across credit grades and income brackets**, with the aim of identifying where income meaningfully contributes to risk assessment and where credit grade alone is sufficient. The results will guide **risk model optimization, pricing strategies, and underwriting policies**.
 
 ---

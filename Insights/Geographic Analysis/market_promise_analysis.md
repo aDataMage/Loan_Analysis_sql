@@ -136,9 +136,9 @@ ORDER BY default_rate ASC, avg_income DESC;
 
 ---
 
-## Next Steps & Recommendations (merged)
+## Next Steps & Recommendations
 
-### Tactical execution (0–3 months)
+### Tactical execution
 
 1. **Targeted Origination: UK first, then USA & Canada**
 
@@ -154,7 +154,7 @@ ORDER BY default_rate ASC, avg_income DESC;
    * Offer **competitive pricing** (lower rates or fees) for verified low-risk segments to increase share of wallet.
    * Test premium products for higher-income subsegments while keeping tighter terms for medium/high risk.
 
-### Analytical & governance (1–6 months)
+### Analytical & governance
 
 1. **Calibrate market scoring and thresholds**
 
@@ -173,7 +173,7 @@ ORDER BY default_rate ASC, avg_income DESC;
 
    * Set and monitor KPIs: approval rate by risk bin, default rate by vintage and country, loss given default (LGD) and risk-adjusted return on capital (RAROC) by country.
 
-### Strategic (6–12 months)
+### Strategic
 
 1. **Product and channel optimization**
 
@@ -186,11 +186,3 @@ ORDER BY default_rate ASC, avg_income DESC;
 3. **A/B test market-level interventions**
 
     * Run controlled experiments on pricing, underwriting thresholds, and customer acquisition to measure lift and inform full-scale rollouts.
-
----
-
-## Visualization suggestions (for dashboard / presentation)
-
-* **Market Attractiveness Score**: bar chart ranking countries by the composite score (risk ↓, income ↑, low-risk % ↑).
-* **Default Rate vs Avg Income scatter**: bubble size = total_loan_volume; bubble color = low_risk_percentage.
-* **Risk bin distribution**: stacked bar for each country (Very Low → Very High).

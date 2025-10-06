@@ -1,4 +1,4 @@
-# City-Level Risk & Income Analysis: Identifying Expansion Opportunities"
+# City-Level Risk & Income Analysis: Identifying Expansion Opportunities
 
 ## **Business Context**
 
