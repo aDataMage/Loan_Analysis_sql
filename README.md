@@ -1,321 +1,144 @@
-# Loan Default Analysis - SQL Portfolio Project
+Of course. I have restructured your project description into a more formal report layout and generated a concise executive summary. The adjustments aim to enhance clarity and impact for a business audience.
 
-## Project Overview
+-----
 
-This project analyzes loan application data to identify patterns in loan defaults and provide actionable insights for risk assessment and business decision-making. Using advanced SQL techniques and statistical analysis, I explored key factors that influence loan approval outcomes and default rates across different customer segments.
+# Loan Default Analysis: A Data-Driven Approach to Risk Management and Market Strategy
 
-**Key Focus Areas:**
+## Executive Summary
 
-- Risk assessment and credit analysis
-- Geographic market analysis
-- Statistical validation of risk factors
+This project analyzed over 32,000 loan applications to identify the primary drivers of default, providing actionable intelligence to refine risk assessment models, streamline underwriting processes, and guide strategic market expansion.
 
-## Dataset Description
+Our analysis revealed that **Credit Grade** is the most dominant predictor of default, far outweighing the influence of income. We also identified **Debt-to-Income (DTI) ratio** and **previous defaults** as the two most critical secondary risk factors, while finding that credit history length was not statistically significant. Geographically, the **UK** emerges as the most promising market for expansion, balancing high loan volume with stable, predictable default rates.
 
-The dataset contains 32,000+ loan application records with 28 features covering:
+Based on these findings, we recommend immediate updates to the credit scoring model, including a **64:36 weighting for DTI versus previous defaults** and the consolidation of Credit Grades A-C into a single low-risk tier. Strategically, we advise prioritizing the UK for growth and developing targeted origination strategies for high-potential cities like London and Victoria. Implementing these data-driven recommendations will enhance portfolio profitability, reduce default rates, and improve underwriting efficiency.
 
-- **Demographics:** Age, income, education, marital status, location
-- **Financial Metrics:** Debt-to-income ratio, credit utilization, loan amounts
-- **Credit History:** Credit grade, previous defaults, credit history length, delinquencies
-- **Loan Characteristics:** Loan purpose, interest rate, loan term, repayment status
+-----
 
-**Target Variable:** Binary loan default outcome (0 = repaid, 1 = defaulted)
+## 1\. Project Introduction
 
-## Repository Structure
+### 1.1. Problem Statement
 
-```tree
-loan-default-analysis/
-│   README.md
-│
-├───Data
-│   │   Credit_Risk_Dataset_Onyx_Data_September_25.csv
-│   │
-│   ├───Geographic Analysis
-│   │       default_rates_vs_income.csv
-│   │       default_rates_vs_loan_volumes.csv
-│   │       stability_analysis.csv
-│   │
-│   └───Risk Assesment
-│           credit_utilization_vs_default_rate.csv
-│           employment-length-analysis.csv
-│           income-and-credit_grade-analysis.csv
-│           lti_default_rate.csv
-│           risk_factor_analysis.csv
-│
-├───Insights
-│   ├───Geographic Analysis
-│   │       default_rates_vs_loan_volumes.md
-│   │       default_rate_vs_income_by_cities.md
-│   │       market_promise_analysis.md
-│   │
-│   └───Risk Assesment
-│           credit_utilization_vs_default_rate.md
-│           employment-length-analysis.md
-│           income-and-credit_grade-analysis.md
-│           lti_default_rate.md
-│           risk_factor_analysis.md
-│
-├───Questions
-│       advanced-analytics.md
-│       customer-segmentation.md
-│       geographic-analysis.md
-│       product-performance.md
-│       risk-assessment.md
-│
-├───Solutions
-├───SQL
-│   ├───Geographic Analysis
-│   │       Default_rates_vs_Income.sql
-│   │       Default_rates_vs_Loan_volumes.sql
-│   │       SQLQuery2.sql
-│   │       Stability Analysis.sql
-│   │
-│   └───Risk_Assesments
-│           Credit Utilization Ratio and Default Rate.sql
-│           Employment Length vs Default Rate Analysis.sql
-│           Income and Credit Grade Analysis.sql
-│           Loan to Income vs Default Rate.sql
-│           Risk Factor Analysis.sql
-│
-├───Statistical Tests
-│   ├───Geographic Analysis
-│   │       city_risk_analysis_6segments.png
-│   │       default_rates_vs_income.ipynb
-│   │       default_rates_vs_loan_volumes.ipynb
-│   │       stability_analysis.ipynb
-│   │       state_risk_analysis.png
-│   │
-│   └───Risk Assesment
-│           credit_utilization_vs_default_rate.ipynb
-│           employment-length-analysis.ipynb
-│           income-and-credit_grade-analysis.ipynb
-│           lti_default_rate.ipynb
-│           risk_factor_analysis.ipynb
-│
-└───Visualizations
-    ├───Geographic Analysis
-    │       city_risk_analysis.png
-    │       state_risk_analysis.png
-    │
-    └───Risk Assesment
-            employment-length-analysis.png
-            income-and-credit_grade-analysis.png
-            risk_factor_analysis.png
-```
+The goal of this project is to analyze a comprehensive loan application dataset to identify key patterns and factors that correlate with loan defaults. By understanding these drivers, the business can improve its risk assessment framework, make more informed credit approval decisions, and optimize its market strategy for sustainable growth.
 
+### 1.2. Key Objectives
 
-## Key Analyses Completed
+  * **Risk Assessment:** Identify the most predictive demographic and financial factors for loan default.
+  * **Geographic Analysis:** Evaluate market performance across different countries, states, and cities to identify opportunities and risks.
+  * **Statistical Validation:** Use rigorous statistical methods to validate findings and ensure recommendations are based on significant relationships.
+  * **Business Strategy:** Translate analytical insights into actionable recommendations for underwriting policies, risk scoring, and market expansion.
 
-### Risk Assessment & Credit Analysis
+-----
 
-#### 1. Credit Grade vs Income Bracket Analysis
+## 2\. Data and Methodology
 
-**Business Question:** What is the default rate by credit grade and how does it vary across income brackets?
+### 2.1. Dataset Description
 
-**Key Findings:**
+The analysis was performed on a dataset of over 32,000 loan application records, containing 28 features that include:
 
-- Credit grade is the dominant predictor of default risk
-- Grade G loans show 95-100% default rates across all income levels
-- Grades A-C show statistically similar performance (no significant difference)
-- Income level has minimal impact compared to credit grade
-- Income Level <50k shows difference in credit grade A-C and D-E from 50k>
+  * **Demographics:** Age, income, education, marital status, location.
+  * **Financial Metrics:** Debt-to-income ratio, credit utilization, loan amounts.
+  * **Credit History:** Credit grade, previous defaults, credit history length, delinquencies.
+  * **Loan Characteristics:** Loan purpose, interest rate, term, and the binary target variable: **loan default status** (0 = Repaid, 1 = Defaulted).
+
+### 2.2. Methodology
+
+The project followed an end-to-end analytical workflow, starting with data cleaning and exploration using advanced SQL queries. Key risk factors and customer segments were analyzed using statistical tests in Python, primarily **Analysis of Variance (ANOVA)** with **Tukey HSD post-hoc tests** to validate the significance of observed differences. The resulting insights were then used to formulate strategic business recommendations.
+
+-----
+
+## 3\. Key Analyses and Findings
+
+### 3.1. Risk Assessment & Credit Analysis
+
+#### Finding 1: Credit Grade is the Dominant Predictor of Default
+
+Credit grade is the single most powerful indicator of risk. Grade G loans have a near-certain default rate (95-100%), while Grades A-C perform similarly with low default rates. Income level has a minimal impact on default probability compared to the applicant's credit grade.
 
 <img alt="alt text" height="500" src="/Visualizations/Risk%20Assesment/income-and-credit_grade-analysis.png" title="Heatmap of Credit Grade vs Income Bracket" width="500"/>
 
-**Statistical Validation:** Two-way ANOVA with Tukey HSD post-hoc testing (α=0.05)
+#### Finding 2: DTI and Previous Defaults are the Primary Risk Indicators
 
-**Business Impact:** Established 4-tier risk classification system for automated underwriting
+A three-way ANOVA revealed that Debt-to-Income (DTI) ratio and a history of previous defaults are the strongest combined predictors of risk. DTI explains 64% of the variance in default rates, while previous defaults explain 36%. In contrast, **credit history length was found to be statistically insignificant** and can be removed from primary risk models.
 
-[View Full Analysis](/Insights/Risk%20Assesment/income-and-credit_grade-analysis.md)
+ <img alt="alt text" height="500" src="/Visualizations/Risk%20Assesment/risk_factor_analysis.png" title="Contingency Table" width="500"/>
 
----
+#### Finding 3: Stable Employment (5-20 Years) Significantly Lowers Risk
 
-#### 2. Risk Factor Combination Analysis
+Borrowers with an employment tenure between 5 and 20 years have a **9.1% lower default rate** than those with shorter tenures. The applicant's specific job type did not show a significant correlation with default risk.
 
-**Business Question:** Which combination of factors (debt-to-income ratio, previous defaults, credit history length) creates the highest risk segments?
+ <img alt="alt text" height="500" src="/Visualizations/Risk%20Assesment/employment-length-analysis.png" title="Heatmap of Employment Length vs Type" width="500"/>
 
-**Key Findings:**
+#### Finding 4: Loan-to-Income (LTI) Ratio Above 30% is a Critical Threshold
 
-- **DTI Level:** Strongest predictor (F=259.82, p=0.004) - explains 64% of variance
-- **Previous Defaults:** Secondary predictor (F=147.55, p=0.007) - explains 36% of variance
-- **Credit History Length:** Not statistically significant (F=1.06, p=0.486)
-- High DTI customers have 25.6% higher default rates than low DTI (p=0.002)
+While low LTI ratios (\<10%) correspond to the lowest default rates (11.5%), the risk accelerates sharply once the LTI ratio exceeds 30%. This makes LTI a valuable early-stage screening metric.
 
-<img alt="alt text" height="500" src="/Visualizations/Risk%20Assesment/risk_factor_analysis.png" title="Contingency Table" width="500"/>
+#### Finding 5: Credit Utilization is Not a Strong Standalone Predictor
 
-**Statistical Validation:** Three-way ANOVA with interaction effects testing
+Contrary to common belief, credit utilization ratio alone was not a strong predictor of default in this portfolio. Low utilization does not necessarily indicate low risk, as it may reflect thin or dormant credit files.
 
-**Business Impact:** Recommended 64:36 weight ratio for DTI vs previous defaults in risk scoring; removed credit history length from models
+### 3.2. Geographic Market Analysis
 
-[View Full Analysis](/Insights/Risk%20Assesment/risk_factor_analysis.md)
+#### Finding 6: The UK is the Top Market for Balanced Growth
 
----
+Among the top three markets (UK, USA, Canada), default rates are tightly clustered around 21.8%. However, the UK combines the largest loan volume with a slightly better risk profile, making it the most attractive target for expansion.
 
-#### 3. Employment Length Correlation Analysis
+#### Finding 7: No "Sweet Spot" States Exist, but England Leads Performance
 
-**Business Question:** How does employment length correlate with default rates across different job types?
+Analysis of US states and UK countries revealed a moderate positive correlation ($r \approx 0.61$) between loan volume and default rate. No region fell into the ideal "Low Risk / High Volume" category. England was the strongest performer, with $35.48M in loan volume at a 21.8% default rate.
 
-**Key Findings:**
+#### Finding 8: London and Victoria are Prime City-Level Expansion Targets
 
-- Long employment tenure (5-20 years) shows significantly lower default rates
-- 9.075% lower default rate vs short employment (p=0.021)
-- Employment type showed no significant contribution to default rates
-- Very long tenure (20+ years) paradoxically shows higher risk (small sample issue)
-- High variation across employment length in self-employed type
+At the city level, **London** and **Victoria** stand out with below-average default rates (\~21%) and high average incomes ($64k–$67k), indicating strong repayment capacity and market potential. Conversely, cities like Manchester and Edinburgh represent risk concentration zones.
 
-<img alt="alt text" height="500" src="/Visualizations/Risk%20Assesment/employment-length-analysis.png" title="Heatmap of Employment Length vs Type" width="500"/>
+-----
 
-**Statistical Validation:** Two-way ANOVA with Tukey HSD comparisons
+## 4\. Business Recommendations
 
-**Business Impact:** Prioritize borrowers with 5-20 years employment history; adjust interest rates based on tenure
+### 4.1. Immediate Actions
 
-[View Full Analysis](/Insights/Risk%20Assesment/employment-length-analysis.md)
+1.  **Update Risk Models:** Re-weight the credit scoring algorithm to prioritize DTI and previous defaults using a **64:36 ratio**.
+2.  **Simplify Underwriting:** Remove credit history length from primary risk factors to streamline the application and decisioning process.
+3.  **Implement Employment-Based Pricing:** Introduce interest rate adjustments based on employment tenure, rewarding applicants with 5-20 years of stable employment.
+4.  **Automate Low-Risk Approvals:** Consolidate Credit Grades A-C into a single "Tier 1" low-risk category and implement automated approvals for this segment.
 
-#### 4. Credit Utilization Ratio Analysis
+### 4.2. Strategic Initiatives
 
-**Business Question:** Which credit utilization ranges show the lowest default rates, and how strong is the relationship
-between utilization and default probability?
+1.  **Focus Geographic Expansion:** Prioritize marketing and capital deployment in the UK, with a specific focus on high-potential cities like London and Victoria.
+2.  **Develop Niche Products:** Create specialized loan products with stricter terms or higher rates for high-risk segments (e.g., Credit Grades E-G) to safely capture a wider market.
+3.  **Introduce State-Level Risk Weighting:** Add a state/regional risk adjustment factor into credit models to account for localized economic conditions.
 
-**Key Findings:**
+-----
 
-- Credit utilization ratio alone is not a strong predictor of default risk in this portfolio.
-- “low utilization ≠ low risk” — it might reflect thin credit files, unused lines, or dormant accounts.
-- High utilization (>80%) slightly elevates risk but not enough to justify strict cutoff policies without additional signals.
+## 5\. Technical Implementation
 
-**Statistical Validation:** One-Way Anova
+### 5.1. Skills Demonstrated
 
-**Business Impact:** Do Not Overweight Utilization in Risk Models, Avoid Penalizing Low Utilization Alone
+  * **SQL:** Complex CTEs, advanced `CASE` statements, conditional aggregations, and subquery optimization for data transformation and feature engineering.
+  * **Statistical Analysis:** One-way and multi-way ANOVA, Tukey HSD tests, effect size calculations, and confidence interval testing using Python (`statsmodels`, `scipy`).
+  * **Business Intelligence:** Development of risk scoring logic, customer segmentation, market opportunity analysis, and creation of policy recommendation frameworks.
 
-[View Full Analysis](Insights/Risk%20Assesment/credit_utilization_vs_default_rate.md)
+### 5.2. Tools and Technologies
 
-#### 5. Loan to Income ratio Analysis
+  * **Database:** SQL Server / MySQL
+  * **Analysis:** Python (Pandas, NumPy, SciPy, Statsmodels)
+  * **Visualization:** Python (Matplotlib, Seaborn), Power BI
+  * **Reporting:** Markdown
 
-**Business Question:** What's the relationship between loan-to-income ratio and default probability?
+-----
 
-**Key Findings:**
+## 6\. Conclusion and Future Work
 
-- 30% emerges as a meaningful risk threshold, above which default risk speeds up sharply
-- Borrowers with LTI below 10% show the lowest default probability (11.5%), indicating strong repayment capacity
-**Statistical Validation:** One-Way Anova
+This project successfully translated complex loan data into a clear, statistically validated framework for enhancing credit risk management. The findings provide a direct path to improving model accuracy, operational efficiency, and strategic decision-making.
 
-**Business Impact:** Use loan-to-income segmentation as an early-stage screening tool in credit scoring models to quickly flag high-risk applications.
+### 6.1. Future Enhancements
 
-[View Full Analysis](Insights/Risk%20Assesment/lti_default_rate.md)
+  * [ ] Develop a predictive machine learning model (e.g., Logistic Regression, Gradient Boosting) to forecast default probability at the individual applicant level.
+  * [ ] Conduct customer lifetime value (CLV) analysis to segment borrowers based on long-term profitability.
 
----
+-----
 
-### Geographic Market Analysis
+## 7\. Project Resources
 
-#### 6. International Market Performance
-
-**Business Question:** How do default rates vary by country, and which international markets show the strongest potential for strategic expansion?
-
-**Key Findings:**
-
-- Default rates for the three largest markets are tightly clustered between **21.7% and 21.9%**, implying broadly similar credit behaviour across markets.
-- The UK slightly outperforms peers on default rate and low-risk share while also having the largest loan volume — making it the most attractive near-term target for scaled product rollouts.
-
-
-**Business Impact:** Targeted Origination: UK first, then USA & Canada
-
-[View Full Analysis](/Insights/Geographic%20Analysis/market_promise_analysis.md)
-
-#### 7. Default Rate vs Loan Volumes by State
-
-**Business Question:** Which states combine **low default risk** with **high loan volumes** — and which require closer monitoring due to unfavorable risk–volume dynamics?
-
-**Key Findings:**
-
-- None of the states fall into the **Low Risk / High Volume** category — the “sweet spot” for lending growth.
--  **England** emerges as the strongest performer, with **$35.48M in loan volume** and a **default rate of 21.8%** — the **best combination of scale and risk**.
-- A moderate **positive correlation (r ≈ 0.61)** between **loan volume** and **default rate** suggests that **higher exposure tends to bring higher risk**.
-
-**Business Impact:** Add a **state-level risk weight** into existing credit models
-
-[View Full Analysis](/Insights/Geographic%20Analysis/default_rates_vs_loan_volumes.md)
-
-#### 7. City-Level Risk & Income Analysis: Identifying Expansion Opportunities"
-
-**Business Question:** What cities represent the best expansion opportunities based on income levels and default rates?
-
-**Key Findings:**
-
-- London and Victoria stand out as top expansion targets — both exhibit below-portfolio default rates (~21%) and competitive income levels ($64–67k), suggesting strong borrower repayment capacity.
-- Manchester and Edinburgh combine above-average default rates with strong demand, indicating risk concentration zones where portfolio diversification or credit tightening is warranted.
-
-**Business Impact:** Explore product differentiation for high-income, low-risk borrowers.
-
-[View Full Analysis](/Insights/Geographic%20Analysis/default_rate_vs_income_by_cities.md)
-
-
----
-
-## Technical Skills Demonstrated
-
-### SQL Techniques
-
-- Complex CTEs with multiple nesting levels
-- Advanced CASE logic for categorical binning
-- Conditional aggregations
-- Subquery optimization
-- Data cleaning and outlier handling
-
-### Statistical Analysis
-
-- One-way and three-way ANOVA
-- Tukey HSD multiple comparison tests
-- Effect size calculations (sum of squares)
-- Coefficient of variation for stability metrics
-- Confidence intervals and significance testing
-
-### Business Intelligence
-
-- Risk scoring model development
-- Customer segmentation analysis
-- Market opportunity identification
-- Predictive factor validation
-- Policy recommendation frameworks
-
-## Key Business Recommendations
-
-### Immediate Actions
-
-1. **Update Risk Models:** Implement 64:36 weighting for DTI vs previous defaults
-2. **Simplify Underwriting:** Remove credit history length from primary risk factors
-3. **Employment-Based Pricing:** Apply tenure-based interest rate adjustments
-4. **Credit Grade Tiers:** Consolidate A-C grades into single low-risk category
-
-### Strategic Initiatives
-
-1. Focus expansion on low-risk geographic markets identified in analysis
-2. Develop specialized products for high-risk segments (Grades E-G)
-3. Streamline application process by reducing non-predictive data collection
-4. Implement automated approval for Tier 1 borrowers (Grades A-C)
-
-## Tools & Technologies
-
-- **Database:** SQL Server / MySQL
-- **Statistical Analysis:** Python (statsmodels, scipy)
-- **Visualization:** Python (matplotlib, seaborn)
-- **Documentation:** Markdown
-
-## Project Highlights
-
-- Analyzed 32,000+ loan records with 28 variables
-- Conducted rigorous statistical testing with proper multiple comparison corrections
-- Generated actionable insights with clear business impact
-- Demonstrated end-to-end analytical workflow from SQL to business recommendations
-- Created publication-quality visualizations for executive presentations
-- Created a powerBI Dashboard - 
-## Future Enhancements
-
-- [ ] Develop customer lifetime value segmentation
-- [ ] Build predictive machine learning model for default probability
-
-## Contact
-
-**Adejori Eniola**
-
-- LinkedIn: https://www.linkedin.com/in/adatamage/
-- Email: adejorieniola@gmail.com
-- Portfolio: https://github.com/aDataMage
+  * **Interactive Dashboard:** [View Power BI Report](https://app.powerbi.com/groups/me/reports/2ec52011-d429-492f-8323-48939cd57157/e344d92e99b5265b9c4d?experience=power-bi)
+  * **Project Repository:** [GitHub Link](https://www.google.com/search?q=https://github.com/aDataMage/loan-default-analysis)
+  * **Contact:** Adejori Eniola ([LinkedIn](https://www.linkedin.com/in/adatamage/) | adejorieniola@gmail.com)
